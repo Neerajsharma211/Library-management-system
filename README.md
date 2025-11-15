@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Library Management System
 
 A comprehensive library management system built with Flask (backend) and vanilla JavaScript (frontend), featuring role-based access control, book management, transaction tracking, and fine calculation.
@@ -251,3 +252,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support or questions, please open an issue on GitHub.
+=======
+# Library-management-system
+ A comprehensive library management system built with Flask (backend) and vanilla JavaScript (frontend), featuring role-based access control, book management, transaction tracking, and fine calculation.
+>>>>>>> a5ddd4d2d83252ce9642cbc02ad56c8b49ba02bd
