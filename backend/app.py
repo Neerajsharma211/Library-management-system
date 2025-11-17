@@ -1,6 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 from config import Config
+import os
 
 # Import blueprints
 from routes.auth import auth_bp
@@ -24,6 +25,15 @@ def create_app():
     app.register_blueprint(users_bp, url_prefix='/api/users')
     app.register_blueprint(reports_bp, url_prefix='/api/reports')
     app.register_blueprint(fines_bp, url_prefix='/api/fines')
+
+    # Serve static files from frontend directory
+    @app.route('/')
+    def index():
+        return send_from_directory('../frontend', 'index.html')
+
+    @app.route('/<path:filename>')
+    def serve_static(filename):
+        return send_from_directory('../frontend', filename)
 
     # Health check endpoint
     @app.route('/api/health', methods=['GET'])
